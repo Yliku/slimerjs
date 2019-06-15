@@ -9,8 +9,7 @@ var savePath = phantom.args[3];
 webpage.open(url, function (status) {
     // webpage.viewportSize = { width:widthSize, height:heightSize };	//截图窗口预览的大小
     slimer.wait(waitTime);
-    var dt = new Date();	//js语法
-    webpage.render(savePath + '/'+ dt.getTime() + picName + '.png');
+    webpage.render(savePath + '/'+ picName);
     //文件保存的相对路径是相对于执行该命令的窗口的路径，在laravel中也就是能执行 artisan命令，即是laravel项目的路径
     slimer.exit();
 });
